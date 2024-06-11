@@ -455,6 +455,18 @@ class Deliveryservice(models.Model):
     class Meta:
         verbose_name_plural = "Deliveryservice"
 
+########
+
+
+class Paidpromotioncontentimage(models.Model):
+    heading = RichTextField(max_length=200, default='')
+    content = RichTextField(max_length=200, default='')
+    image = models.ImageField(upload_to=get_image_filename, default='')
+ 
+    def __self__(self):
+        return self.heading
+    class Meta:
+        verbose_name_plural = "PaidPromotion content & image"
 
 ################################
 class Paidpromotionads(models.Model):
@@ -470,7 +482,10 @@ class Paidpromotionads(models.Model):
     def __self__(self):
         return self.paid_facebookpage_text
     class Meta:
-        verbose_name_plural = "PaidPromotionAdsLink & Image"
+        verbose_name_plural = "PaidPromotionads Link & Png"
+######
+
+
 
 
 class Paid_facebookpage(models.Model):
@@ -552,3 +567,13 @@ class Seothirdsection(models.Model):
         return self.title1
     class Meta:
         verbose_name_plural = "SEO_Third_Section"
+
+
+class Footersection(models.Model):
+    content = RichTextField(max_length=255, default='')
+    logo = models.ImageField(upload_to=get_image_filename, default='')
+
+    def __self__(self):
+        return self.content
+    class Meta:
+        verbose_name_plural = "Footersection"

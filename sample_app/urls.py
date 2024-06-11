@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, re_path
 from .views import SubmitFormView
 from . import views
 
@@ -28,8 +28,8 @@ from . import views
 
 urlpatterns = [
 
-    # path('', views.index, name='index'),
-    path('', views.myview, name='index'),
+    path('', views.index, name='index'),
+    # path('', views.myview, name='index'),
 
     path('submit-form/', SubmitFormView.as_view(), name='submit-form'),
 
@@ -75,6 +75,7 @@ urlpatterns = [
     path('webdesignservice/', views.webdesignservice),
     path('ecommerceservice/', views.ecommerceservice),
     path('deliveryservice/', views.deliveryservice),
+    path('paidpromotioncontentimage/', views.paidpromotioncontentimage),
     path('paidpromotionads/', views.paidpromotionads),
     path('paidfacebookpage/', views.paid_facebookpage),
     path('paidyoutubepage/', views.paid_youtubepage),
@@ -87,6 +88,8 @@ urlpatterns = [
     path('seofirstsection/', views.seofirstsection),
     path('seosecondsection/', views.seosecondsection),
     path('seothirdsection/', views.seothirdsection),
+
+    path('footersection/', views.footersection)
     
     
     ### second section:

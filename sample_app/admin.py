@@ -227,7 +227,10 @@ admin.site.register(Deliveryservice, DeliveryserviceAdmin)
 
 
 ################################
+class PaidpromotioncontentimageAdmin(admin. ModelAdmin):
+    list_display=["heading",'content', 'image']
 
+admin.site.register(Paidpromotioncontentimage, PaidpromotioncontentimageAdmin)
 
 class PaidpromotionadsAdmin(admin.ModelAdmin):
     list_display=['paid_facebookpage_text','paid_facebookpage_image','paid_intagrampage_text','paid_intagrampage_image','paid_youtubepage_text','paid_youtubepage_image','paid_googlepage_text','paid_googlepage_image'] 
@@ -276,3 +279,8 @@ class SeothirdsectionAdmin(admin.ModelAdmin):
     list_display = ['title1','icon1','content1','title2','icon2','content2','title3','icon3','content3','image1','image2' ]
 
 admin.site.register(Seothirdsection, SeothirdsectionAdmin)
+
+class FootersectionAdmin(admin.ModelAdmin):
+    list_display = ["content", 'logo']
+
+admin.site.register(Footersection, FootersectionAdmin)

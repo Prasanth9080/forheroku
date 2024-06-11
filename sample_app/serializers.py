@@ -305,6 +305,11 @@ class DeliveryserviceSerializer(serializers.ModelSerializer):
 
 
 ################################
+class PaidpromotioncontentimageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Paidpromotioncontentimage
+        fields = '__all__'
+
 
 class PaidpromotionadsSerializer(serializers.ModelSerializer):
     class Meta:
@@ -349,3 +354,8 @@ class SeothirdsectionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Seothirdsection
         fields = '__all__'
+
+class FootersectionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Footersection
+        fields ='__all__'

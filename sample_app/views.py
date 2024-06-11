@@ -357,9 +357,21 @@ class SubmitFormView(APIView):
 
 # from django.shortcuts import render
 
-def myview(request):
-    # context = {'key': 'value'}  # Optional: Add context data if needed
-    return render(request, 'index.html')  # Pass the request and template name
+# def myview(request):
+#     # context = {'key': 'value'}  # Optional: Add context data if needed
+#     return render(request, 'index.html')  # Pass the request and template name
+
+
+# from django.shortcuts import render
+
+# def myview(request):
+#     return render(request, 'index.html')
+
+from django.shortcuts import render
+
+def index(request):
+    return render(request, 'index.html')
+
 
 
 
@@ -928,6 +940,22 @@ def deliveryservice(request):
 
 ################################
 
+## Paidpromotioncontentimage
+
+@api_view(['GET', 'POST'])
+def paidpromotioncontentimage(request):
+    if request.method == 'GET':
+        queryset = Paidpromotioncontentimage.objects.all()
+        serializer = PaidpromotioncontentimageSerializer(queryset, many=True)
+        return Response(serializer.data)
+    elif request.method == 'POST':
+        serializer = PaidpromotioncontentimageSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+
 ## Paidpromotionads 
 
 @api_view(['GET', 'POST'])
@@ -1041,6 +1069,19 @@ def seothirdsection(request):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+
+@api_view(['GET', 'POST'])
+def footersection(request):
+    if request.method == 'GET':
+        queryset = Footersection.objects.all()
+        serializer = FootersectionSerializer(queryset, many=True)
+        return Response(serializer.data)
+    elif request.method == 'POST':
+        serializer = FootersectionSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 

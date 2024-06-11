@@ -6,7 +6,7 @@ import Instagrampaidads from "./Instagrampaidads";
 import Youtubepaidads from "./Youtubepaidads";
 import Googlepaidads from "./Googlepaidads";
 import Facebookpaidads from "./Facebookpaidads";
-import { fetchpaidpromotionads, base_api } from "../Axios/Axios";
+import { fetchpaidpromotionads, fetchpaidpromotioncontentimage, base_api } from "../Axios/Axios";
 import Aos from "aos";
 import 'aos/dist/aos.css';
 
@@ -17,6 +17,7 @@ function Paidpromotionads() {
   const [showgoogle, googlecontent] = useState(false);
 
   const [paidpromotionads, setPaidpromotionads] = useState([]);
+  const [paidpromotioncontentimage, setPaidpromotioncontentimage] = useState([]);
   const [isBackendError, setIsBackendError] = useState(false);
 
   const handledesignclick = () => {
@@ -51,7 +52,9 @@ function Paidpromotionads() {
     const fetchData = async () => {
       try {
         const paidpromotionadsData = await fetchpaidpromotionads();
+        const paidpromotioncontentimageData = await fetchpaidpromotioncontentimage();
         setPaidpromotionads(paidpromotionadsData);
+        setPaidpromotioncontentimage(paidpromotioncontentimageData);
       } catch (error) {
         console.error("Error fetching paidpromotionads data:", error);
         setIsBackendError(true);
@@ -64,15 +67,15 @@ function Paidpromotionads() {
 
   useEffect(()=> {Aos.init({duration:2000});},[])
 
-  if (isBackendError || !paidpromotionads || !paidpromotionads.length) {
+  if (isBackendError || !paidpromotionads || !paidpromotioncontentimage || !paidpromotionads.length || !paidpromotioncontentimage.length) {
     return (
-      <div id="paidpromotion">
+      <div id="paidpromotion"> 
         <div className="main-content">
           <div className="social-header-bg-paid">
             <div className="row text-contents-service">
               <div className="col-lg-6 col-md-12 col-sm-12 offset-lg-0 offset-md-0 offset-sm-0 text-content-service">
                 <div data-aos="fade-right" className="left-content">
-                  <h1 >Paid Promotion Ads</h1>
+                  <h1 >Paid Promotion Adslll</h1>
                   <div className="line-service"></div>
                   <h4>
                     The best Social Media paid advertising company in madurai,
@@ -172,29 +175,21 @@ function Paidpromotionads() {
     <div id="paidpromotion">
       <div className="main-content">
         <div className="social-header-bg-paid">
+        {paidpromotioncontentimage.map((service) => (
           <div className="row text-contents-service">
             <div className="col-lg-6 col-md-12 col-sm-12 offset-lg-0 offset-md-0 offset-sm-0 text-content-service">
               <div data-aos="fade-right" className="left-content">
-                <h1 >Paid Promotion Ads</h1>
+                <h1 dangerouslySetInnerHTML={{ __html: service.heading}}/>
                 <div className="line-service"></div>
-                <h4>
-                  The best Social Media paid advertising company in madurai,
-                  Tamilnadu. Offers a number of Social Media paid promotion
-                  options to help businesses maintain their overall online
-                  purchase.
-                </h4>
+                <h4 dangerouslySetInnerHTML={{ __html: service.content}}/>
               </div>
             </div>
 
             <div data-aos="fade-left" className="col-lg-6 col-md-12 col-sm-12 text-image-service">
-              <img
-                src="/Imagefile/Man.png"
-                height="600"
-                width="700"
-                className="img-fluid"
-              />
+              <img src={`${base_api}${service.image}`} height="600" width="700" className="img-fluid" />
             </div>
           </div>
+        ))}
         </div>
 
         <div data-aos="zoom-in"  className="container">

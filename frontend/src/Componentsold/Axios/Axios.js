@@ -428,6 +428,7 @@ export const fetcheighthsection = async () => {
       return null;
     }
    }; 
+
    export const fetchwebdevelopmentservice = async() =>{
     try{
       const response = await axios.get(`${base_api}/webdevelopmentservice/`)
@@ -437,6 +438,7 @@ export const fetcheighthsection = async () => {
       return null;
     }
    }; 
+
    export const fetchwebdesignservice = async() =>{
     try{
       const response = await axios.get(`${base_api}/webdesignservice/`)
@@ -473,6 +475,16 @@ export const fetcheighthsection = async () => {
       return response.data;
     }catch(error){
       console.error("Error fetching paidpromotionads:", error);
+      return null;
+    }
+   };
+
+   export const fetchpaidpromotioncontentimage = async() =>{
+    try{
+      const response = await axios.get(`${base_api}/paidpromotioncontentimage/`)
+      return response.data;
+    }catch(error){
+      console.error("Error fetching paidpromotioncontentimage:", error);
       return null;
     }
    };
@@ -547,6 +559,17 @@ export const fetchseofirstsection = async() =>{
     return response.data;
   }catch(error){
     console.error("Error fetching seothirdsection:", error);
+    return null;
+  }
+ };
+
+ 
+ export const fetchfootersection = async() =>{
+  try{
+    const response = await axios.get(`${base_api}/footersection/`)
+    return response.data;
+  }catch(error){
+    console.error("Error fetching footersection:", error);
     return null;
   }
  };
