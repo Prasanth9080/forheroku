@@ -1980,6 +1980,7 @@ li{
 .footer-logo{
     width: 28%;
     margin-top: 20px;
+    cursor: pointer;
 }
 .footer-logo p{
     text-align: left;
@@ -2701,6 +2702,7 @@ input:focus, textarea:focus{
 
 .logo_image{
     margin-left: 20px;
+    cursor: pointer;
 }
 
     /*firsrt section*/

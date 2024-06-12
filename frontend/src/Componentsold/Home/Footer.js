@@ -22,19 +22,20 @@ function Footer() {
   }, []);
 
 
-
   if (isBackendError || !footersection || !footersection.length) {
 
     return (
       <div className="footer-header">
         <div className="footer-content">
           <div className="footer-logo">
-            <img src="Imagefile/footer_logo.png" className="footer-logo-png" />
+            <a href="/"  rel="noopener noreferrer">
+              <img src="Imagefile/footer_logo.png" className="footer-logo-png" />
+            </a>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing
               elit.Soluta,voluptatem, quovero consequuntur atque quam autem, ullam
               eius.
-            </p>
+            </p> 
           </div>
   
           <div className="footer-links">
@@ -45,16 +46,13 @@ function Footer() {
                   <a href="/">Home</a>
                 </li>
                 <li>
-                  <a href="/about1">About</a>
-                </li>
-                <li>
                   <a href="/servicepage">Services</a>
                 </li>
                 <li>
-                  <a href="/portfolio1">Portfolio</a>
+                  <a href="/socialmediamarketing">Portfolio</a>
                 </li>
                 <li>
-                  <a href="/contact1">Contact us</a>
+                  <a href="/contact">Contact us</a>
                 </li>
               </ul>
             </div>
@@ -66,10 +64,10 @@ function Footer() {
                   <a href="/digitalpage">Digital Marketing</a>
                 </li>
                 <li>
-                  <a href="#">Graphic design</a>
+                  <a href="/graphicdesign">Graphic design</a>
                 </li>
                 <li>
-                  <a href="#">Web development</a>
+                  <a href="/servicepage">Web development</a>
                 </li>
                 <li>
                   <a href="/socialmediamarketing">Social media Marketing</a>
@@ -96,13 +94,13 @@ function Footer() {
                     <span>
                       <i class="fa-solid fa-envelope"></i>
                     </span>
-                    <a href="mailto:loremipsum@gmail.com">Sample@gmail.com</a>
+                    <a href="mailto:phoenixmarketing.jp@gmail.com">phoenixmarketing.jp@gmail.com</a>
                   </div>
                   <div>
                     <span>
                       <i class="fa-solid fa-phone-volume"></i>
                     </span>
-                    <a href="tel:+91 987654321">+91 987654321</a>
+                    <a href="tel:+91 987654321" target="_blank" rel="noopener noreferrer">+91 987654321</a>
                   </div>
   
                   <div>
@@ -153,10 +151,16 @@ return (
     <div className="footer-content">
 
     {footersection.map((service) => (
+      // <div className="footer-logo">
+      //   <img src={`${base_api}${service.logo}`} className="footer-logo-png"  />
+      //   <p dangerouslySetInnerHTML={{ __html: service.content}} />
+      // </div>
       <div className="footer-logo">
-        <img src={`${base_api}${service.logo}`} className="footer-logo-png" />
-        <p dangerouslySetInnerHTML={{ __html: service.content}} />
-      </div>
+        <a href="/"  rel="noopener noreferrer">
+          <img src={`${base_api}${service.logo}`} className="footer-logo-png" alt="Logo" />
+        </a>
+        <p dangerouslySetInnerHTML={{ __html: service.content }} />
+     </div>
       ))}
 
       <div className="footer-links">
@@ -167,16 +171,13 @@ return (
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/about1">About</a>
-            </li>
-            <li>
               <a href="/servicepage">Services</a>
             </li>
             <li>
-              <a href="/portfolio1">Portfolio</a>
+              <a href="/socialmediamarketing">Portfolio</a>
             </li>
             <li>
-              <a href="/contact1">Contact us</a>
+              <a href="/contact">Contact us</a>
             </li>
           </ul>
         </div>
@@ -188,10 +189,10 @@ return (
               <a href="/digitalpage">Digital Marketing</a>
             </li>
             <li>
-              <a href="#">Graphic design</a>
+              <a href="/graphicdesign">Graphic design</a>
             </li>
             <li>
-              <a href="#">Web development</a>
+              <a href="/servicepage">Web development</a>
             </li>
             <li>
               <a href="/socialmediamarketing">Social media Marketing</a>
@@ -218,7 +219,7 @@ return (
                 <span>
                   <i class="fa-solid fa-envelope"></i>
                 </span>
-                <a href="mailto:loremipsum@gmail.com">Sample@gmail.com</a>
+                <a href="mailto:phoenixmarketing.jp@gmail.com">phoenixmarketing.jp@gmail.com</a>
               </div>
               <div>
                 <span>

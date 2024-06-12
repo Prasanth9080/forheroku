@@ -683,8 +683,9 @@ function Navbar() {
     return (
       <div>
         <nav className="navbar">
-
-          <img src="/Imagefile/logo.png" height="60" alt="header_image" className="logo_image" />
+          <a href="/"  rel="noopener noreferrer">
+             <img src="/Imagefile/logo.png" height="60" alt="header_image" className="logo_image" />
+          </a>
   
           <div className="menu-container">
             <ul className="menu_list">
@@ -724,7 +725,7 @@ function Navbar() {
                 </Link>
               </li>
               <li className='me-5 mt-3'>
-                <Link to="/contact1" aria-current="page">
+                <Link to="/contact" aria-current="page">
                   Contact
                 </Link>
               </li>
@@ -820,7 +821,9 @@ function Navbar() {
 
       {navbar.map((data) => (
         <div>
-          <img src={`${base_api}${data.logo}`} height="60"  alt="header_image" className="logo_image" />
+          <a href="/"  rel="noopener noreferrer">
+            <img src={`${base_api}${data.logo}`} height="60"  alt="header_image" className="logo_image" />
+          </a>
         </div>
       ))}
 
@@ -865,7 +868,7 @@ function Navbar() {
               </Link>
             </li>
             <li className='me-5 mt-3'>
-              <Link to="/contact1" aria-current="page">
+              <Link to="/contact" aria-current="page">
                 Contact
               </Link>
             </li>
@@ -936,7 +939,7 @@ function Navbar() {
             {formattedPhoneNumber && (
               <li className="chatwithus">
                 <div className="whatsapp-text">
-                  <FaWhatsapp className="youtube" />
+                  <FaWhatsapp className="youtube" />          
                   <a
                     href={`https://api.whatsapp.com/send?phone=${formattedPhoneNumber}`} 
                     target="_blank" rel="noopener noreferrer" >

@@ -31,7 +31,7 @@ function About() {
 
 
     return (
-      <div>
+      <div id="about">
   
         <div className="aboutsection">
           <div className="aboutcontent">
@@ -62,7 +62,7 @@ function About() {
   }
 
   return (
-    <div>
+    <div id="about">
       <div className="aboutsection">
         <div className="aboutcontent">
           {secondsection.map((secondsection) => (

@@ -9,6 +9,7 @@ import Facebookpaidads from "./Facebookpaidads";
 import { fetchpaidpromotionads, fetchpaidpromotioncontentimage, base_api } from "../Axios/Axios";
 import Aos from "aos";
 import 'aos/dist/aos.css';
+import Navbar from "../Home/Navbar";
 
 function Paidpromotionads() {
   const [showfacebook, facebookcontent] = useState(true);
@@ -70,6 +71,7 @@ function Paidpromotionads() {
   if (isBackendError || !paidpromotionads || !paidpromotioncontentimage || !paidpromotionads.length || !paidpromotioncontentimage.length) {
     return (
       <div id="paidpromotion"> 
+      <Navbar/>
         <div className="main-content">
           <div className="social-header-bg-paid">
             <div className="row text-contents-service">
@@ -173,6 +175,7 @@ function Paidpromotionads() {
 
   return (
     <div id="paidpromotion">
+      <Navbar/>
       <div className="main-content">
         <div className="social-header-bg-paid">
         {paidpromotioncontentimage.map((service) => (

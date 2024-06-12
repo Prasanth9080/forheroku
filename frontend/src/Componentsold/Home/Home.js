@@ -3,6 +3,7 @@
 /// backend api is working show the backend data
 
 import React, { useState, useEffect } from "react";
+import Navbar from "./Navbar";
 import About from "./About";
 import Services from "./Services";
 import Counter from "./Counter";
@@ -40,6 +41,7 @@ function Home() {
   if (isBackendError || !firstsection.length) {
     return (
       <div>
+        <Navbar/>
         <div className="header-bg">
           <div className="homecontent">
             <div  data-aos='fade-right' className="text-center">
@@ -81,13 +83,9 @@ function Home() {
   }
 
   return (
-
-
-
-
-    <div>
+ <div>
+  {/* <Navbar/> */}
       <div className="header-bg">
-    
   
       <div className="homecontent">
                 {firstsection.map((item) => (
@@ -104,11 +102,7 @@ function Home() {
 
                 {firstsection.map((item) => (
                   <div data-aos='fade-left' className="homesection-image-all" key={item.id}>
-                    <img
-                      src={`${base_api}${item.image}`}
-                      className="homesection-image"
-                      alt="homesection-image"
-                    />
+                    <img src={`${base_api}${item.image}`} className="homesection-image" alt="homesection-image" />
                   </div>
                 ))}
        </div>
