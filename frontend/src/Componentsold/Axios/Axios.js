@@ -572,4 +572,4 @@ export const fetchseofirstsection = async() =>{
     console.error("Error fetching footersection:", error);
     return null;
   }
- };
+ }; 

@@ -21,7 +21,7 @@
 }
 
 .second-main {
-    background-image: url('F:\New folder\React_Frontend\sample_project\frontend\src\imagesold\digital-bg.jpg');   
+    background-image: url(digitalbgimages/digital-bg.jpg);   
     background-size: cover; /* Cover the entire container */
     background-position: center; /* Center the background image */
     padding: 20px; /* Add some padding to the container */

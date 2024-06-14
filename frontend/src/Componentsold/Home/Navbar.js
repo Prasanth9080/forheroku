@@ -625,7 +625,7 @@
 
 //////// ########################### let's take another navbar, h
 
-
+///// my old navbar 14/06/24
 
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
@@ -637,7 +637,7 @@ function Navbar() {
   const [mobileNavIsOpen, setMobileNavIsOpen] = useState(false);
   const [phoneNumber, setPhoneNumber] = useState("");
   const [formattedPhoneNumber, setFormattedPhoneNumber] = useState("");
-  
+
   const [navbar, setNavbar] = useState([]);
   const [isBackendError, setIsBackendError] = useState(false);
 
@@ -958,6 +958,162 @@ function Navbar() {
 
 export default Navbar;
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// old code combain with  ram navbar code 14-06-24
+
+
+
+// import React, { useState } from 'react';
+// import './Navbar.css';
+// import { Link } from 'react-router-dom';
+// import { FaWhatsapp, FaTimes, FaBars, FaClosedCaptioning } from 'react-icons/fa';
+
+
+// function Header() {
+//   const [mobileNavIsOpen, setMobileNavIsOpen] = useState(false);
+
+//   // Toggle the Mobile Nav open / close
+//   const handleMobileNavClick = () => {
+//     setMobileNavIsOpen(!mobileNavIsOpen);
+//   };
+
+//   return (
+//     <div>
+//       <nav className="navbar">
+//           {/* <img src="/Imagefile/Phoenixlogo.png" height="60" alt="header_image" className="logo_image" /> */}
+//           <img src="/about/Phoenixheader.png" height="60" alt="header_image" className="logo_image"/>
+
+//     {/*Windows Navbar */}
+//         <div className="menu-container">
+//           <ul className="menu_list">
+//             <li className='me-5 mt-3'>
+//               <Link to="/" aria-current="page">
+//                 Home
+//               </Link>
+//             </li>
+//             <li className='me-5 mt-3'>
+//               <Link to="/service1" aria-current="page">
+//                 Service
+//               </Link>
+//               <ul className='submenu'>
+//                 <li className="digital-link">
+//                   <Link to="/digital" aria-current="page" className='digital-marketing'>
+//                     Digital Marketing
+//                   </Link>
+//                   <ul className="service-toggle">
+//                     <li>
+//                       <a href="/socialmediamarketing">Social Media Marketing</a>
+//                     </li>
+//                     <li>
+//                       <a href="/search">Search Engine Optimization</a>
+//                     </li>
+//                     <li>
+//                       <a href="/Paidpromotionads">Paid Promotion Ads</a>
+//                     </li>
+//                   </ul>
+//                 </li>
+//                 <li><Link to="/service1" className='digital-link'>Web Developement</Link></li>
+//                 <li href='#'><Link className='digital-link'>Graphic Designing</Link></li>
+//               </ul>
+//             </li>
+//             <li className='me-5 mt-3'>
+//               <Link to="/socialmediamarketing" aria-current="page">
+//                 Portfolio
+//               </Link>
+//             </li>
+//             <li className='me-5 mt-3'>
+//               <Link to="/contact1" aria-current="page">
+//                 Contact
+//               </Link>
+//             </li>
+//             <li className='chatwithus'>
+//               <FaWhatsapp className="youtube" />
+//               <Link to="/contact1" aria-current="page">
+//                 Chat With us
+//               </Link>
+//             </li>
+//           </ul>
+//         </div>
+//       </nav>
+
+//       <nav className="mobileNav_container">
+//         <img src="Imagefile/logo.png" width="50" alt="logo" className="mobileNav_logo_left" />
+//         {mobileNavIsOpen ? (
+//           <button className="close-btn" onClick={handleMobileNavClick}>
+            
+//           </button>
+//         ) : (
+//           <button className="mobile-menu-icon" onClick={handleMobileNavClick}>
+//             <FaBars />
+//           </button>
+//         )}
+//       </nav>
+
+//       {/* Sidebar for mobile */}
+//       {mobileNavIsOpen && (
+//         <div className="sidebar-mobile">
+//           <div className='d-flex' style={{ justifyContent: 'space-between' }}>
+//               <div><img src="/Imagefile/Phoenixlogo.png" height="60" alt="header_image" className="mobile-navbar-image" /></div>
+//               {/* <div><FaTimes className='close-btn2'/></div> */}
+//               {mobileNavIsOpen ? (
+//           <button className="close-btn-mbl" onClick={handleMobileNavClick}>
+//             <FaTimes />
+//           </button>
+//         ) : (
+//           <button className="mobile-menu-icon" onClick={handleMobileNavClick}>
+            
+//           </button>
+//         )}
+//           </div>
+
+// <ul className='list-row'>
+//             <li className='sidebar-options'><Link to="/" onClick={handleMobileNavClick}>Home</Link></li>
+//             <li className='sidebar-options'>
+//               <Link to="/service1" aria-current="page">
+//                 Service
+//               </Link>
+//               <ul className='submenu'>
+//                 <li className="digital-link">
+//                   <Link to="/digital" aria-current="page">
+//                     Digital Marketing
+//                   </Link>
+//                   <ul className="service-toggle">
+//                     <li>
+//                       <a href="/socialmediamarketing">Social Media Marketing</a>
+//                     </li>
+//                     <li>
+//                       <a href="/search">Search Engine Optimization</a>
+//                     </li>
+//                     <li>
+//                       <a href="/Paidpromotionads">Paid Promotion Ads</a>
+//                     </li>
+//                   </ul>
+//                 </li>
+//                 <li><Link to="/service1" className='digital-link'>Web Developement</Link></li>
+//                 <li href='#'><Link className='digital-link'>Graphic Designing</Link></li>
+//               </ul>
+//             </li>
+//             <li className='sidebar-options'><Link to="/socialmediamarketing" onClick={handleMobileNavClick}>Portfolio</Link></li>
+//             <li className='sidebar-options'><Link to="/contact1" onClick={handleMobileNavClick}>Contact</Link></li>
+//             <li className='chatwithus-mobile'>
+//               <FaWhatsapp className=""/>
+//               <Link to="/contact1" className='chat' aria-current="page">
+//                 Chat With us
+//               </Link>
+//             </li>
+//           </ul>
+//         </div>
+
+//       )}
+//     </div>
+
+
+//   );
+// }
+
+// export default Header;
 
 
 

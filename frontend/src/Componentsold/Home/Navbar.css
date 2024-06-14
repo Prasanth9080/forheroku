@@ -21,7 +21,9 @@ Navbar.css
 
 /* Navbar.css */
 /* Navbar.css */
-.menu_list .submenu {
+
+/* old navbar style in 14-06-24 */
+/* .menu_list .submenu {
   display: none;
   position: absolute;
   background-color: #fff;
@@ -38,7 +40,7 @@ Navbar.css
 }
 
 .menu_list .digital-link:hover {
-  color: #000; /* Change the color of the link on hover if needed */
+  color: #000; 
 }
 
 .hidden {
@@ -116,4 +118,80 @@ ol, ul {
 
 }
 
+ */
 
+
+
+ .sidebar-options {
+  margin: 10px;
+  width: 0;
+  font-size: 24px !important;
+  font-weight: 500;
+}
+
+
+.close-btn2 {
+  background-color: rgb(238, 236, 236);
+  font-size: 24px;
+  margin: 25px;
+}
+
+.close-btn-mbl {
+  background-color: #EEECEC;
+  border-style: none;
+  font-size: 24px;
+  padding: 25px;
+}
+
+.sidebar-mobile li {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.sidebar-mobile {
+  position: fixed;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  z-index: 1000;
+}
+
+.sidebar-mobile {
+  position: fixed;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  z-index: 1000;
+  transition: width 2s;
+  background-color: rgb(238, 236, 236);
+}
+
+.mobile-navbar-image {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  height: 90px;
+}
+
+@media (min-width: 991px) {
+  
+  .sidebar-mobile {
+      position: relative;
+      left: -300px;
+  }
+}
+
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+  .sidebar-mobile ul{
+      margin: 15px;
+  }
+
+  .sidebar-mobile {
+      width: 376px;
+  }
+
+}

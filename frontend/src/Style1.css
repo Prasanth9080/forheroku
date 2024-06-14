@@ -1,3 +1,7 @@
+/* style1. css 14-06-24 before la irukura elaa style um iruku */
+
+
+
 /* Roboto font */
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css');
@@ -5464,8 +5468,7 @@ p {
         font-weight: 500;
     }
     
-    
-    
+
     .footer-contact1 {
         width: 100%;
         margin-top: 0px;

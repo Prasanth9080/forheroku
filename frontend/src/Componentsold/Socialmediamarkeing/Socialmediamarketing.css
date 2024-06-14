@@ -1,8 +1,7 @@
 
 .social-header-bg {
     min-height: 70vh;
-    background-image: url('F:\New folder\React_Frontend\sample_project\frontend\src\imagesold\socialmediamarketing.jpg');
-    /* background-image: url(imagesold/socialmediamarketing.jpg); */
+    background-image: url(BGimage/socialmediamarketing.jpg);
     /* background-color: brown; */
     background-size: cover;
     background-repeat: no-repeat;
@@ -109,7 +108,7 @@
     padding-left: 10px;
 }
 
-.letter p {
+.letter p { 
     border: 1px solid white;
     box-shadow: 1px 1px 1px 1px gray;
     border-radius: 5px;

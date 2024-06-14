@@ -3,7 +3,7 @@ service page css */
 
 .social-header-bg-service {
     min-height: 60vh;
-    background-image:  url('F:\New folder\React_Frontend\sample_project\frontend\src\imagesold\paid_banner_bg.png');
+    background-image:  url(BGimage/paid_banner_bg.png);
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;

@@ -222,7 +222,7 @@ p {
 
 .social-header-bg-paid {
     min-height: 60vh;
-    background-image:  url('F:\New folder\React_Frontend\sample_project\frontend\src\imagesold\seo_bg.jpg');
+    background-image:  url(BGimage/seo_bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
@@ -236,7 +236,7 @@ p {
     background-position: center; /* Center the background image */
     padding: 20px; /* Add some padding to the container */
     width: 100%;
-    background-image: none;
+    /* background-image: none; */
   }
 
 .icons {
