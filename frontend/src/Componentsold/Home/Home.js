@@ -37,7 +37,7 @@ function Home() {
   }, []);
 
   useEffect(()=> { Aos.init({duration:2000});},[])
-
+ 
   if (isBackendError || !firstsection.length) {
     return (
       <div>

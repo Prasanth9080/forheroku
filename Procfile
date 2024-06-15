@@ -1,1 +1,0 @@
-web: gunicorn forheroku.wsgi

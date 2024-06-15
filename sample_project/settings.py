@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 
 import os
-import django_heroku
+# import django_heroku
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -32,8 +32,8 @@ SECRET_KEY = 'django-insecure-td*ati35dgbzdnsx9n^2a+dggi69om+u$b!_ir6=r1h0ed!dt8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
-# ALLOWED_HOSTS = ['.vercel.app']
+# ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
@@ -182,7 +182,7 @@ EMAIL_USE_TLS = True
 EMAIL_USE_SSL= False
 
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
