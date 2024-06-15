@@ -11,7 +11,13 @@
     "env": {
       "DJANGO_SETTINGS_MODULE": "sample_project.settings",
       "SECRET_KEY": "django-insecure-td*ati35dgbzdnsx9n^2a+dggi69om+u$b!_ir6=r1h0ed!dt8",
-      "DEBUG": "False"
+      "DEBUG": "False",
+      "MYSQL_HOST": "localhost",
+      "MYSQL_PORT": "3306",
+      "MYSQL_USER": "root",
+      "MYSQL_PASSWORD": "",
+      "MYSQL_DB": "sample_data1"
     }
+   
   }
   
