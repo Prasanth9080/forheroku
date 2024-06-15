@@ -30,7 +30,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'django-insecure-td*ati35dgbzdnsx9n^2a+dggi69om+u$b!_ir6=r1h0ed!dt8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+
+SECRET_KEY = os.getenv('SECRET_KEY')
+DEBUG = os.getenv('DEBUG') == 'True'
 
 # ALLOWED_HOSTS = ['*']
 ALLOWED_HOSTS = ['.vercel.app']
